@@ -60,14 +60,14 @@ class ListNode:
         return head
     
 
-def BuildList(lst):
-    assert len(lst)>0,"no element"
-    head=ListNode(lst[0])
-    b=head
-    for i in range(1,len(lst)):
-        b.insert(lst[i])
-        b=b.next
-    return head
+# def BuildList(lst):
+#     assert len(lst)>0,"no element"
+#     head=ListNode(lst[0])
+#     b=head
+#     for i in range(1,len(lst)):
+#         b.insert(lst[i])
+#         b=b.next
+#     return head
 
 
 # node1=ListNode(10)
@@ -88,10 +88,10 @@ def BuildList(lst):
 
 # current=head.delnode(10)  #DELETE THE SPECIFIC NODE
 
-current=BuildList([4,6,7,8])
-while current is not None:
-    print(current.data,end="--->")
-    current=current.next
+# current=BuildList([4,6,7,8])
+# while current is not None:
+#     print(current.data,end="--->")
+#     current=current.next
 
 # length_of_list = len(head)
 # print("Length of the list:", length_of_list)  //len of nodes
