@@ -20,5 +20,19 @@ def buildlist2():
     while current is not None:
         print(current.data,end="--->")
         current=current.next
-buildlist2()
-    
+# buildlist2()
+
+def instail(h,x):
+    if h is None:
+        return ListNode(x)
+    a=h
+    while a.next is not None:
+        a=a.next
+    new=ListNode(x)
+    a.next=new
+    return h
+head=BuildList([1,2,3,4])
+current=instail(head,5)
+while current is not None:
+    print(current.data,end="--->")
+    current=current.next
