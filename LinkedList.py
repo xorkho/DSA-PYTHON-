@@ -59,28 +59,42 @@ class ListNode:
                 res[1].delete()
         return head
     
+    def circularize(self):
+        current=self
+        while current.next is not None:
+            current=current.next
+        current.next=self
+        return self
 
-# def BuildList(lst):
-#     assert len(lst)>0,"no element"
-#     head=ListNode(lst[0])
-#     b=head
-#     for i in range(1,len(lst)):
-#         b.insert(lst[i])
-#         b=b.next
-#     return head
+    def linearize(self):
+        current=self
+        while current.next is not self:
+            current=current.next
+        current.next=None
+
+    def Traversing(self):
+        current=self
+        print("Traversing...........")
+        while current.next is not self:
+            print(f"{current.data}-->",end="")
+            current=current.next
+        print(f"{current.data}-->",end="")
+        print()
+        
+def BuildList(lst):
+    assert len(lst)>0,"no element"
+    head=ListNode(lst[0])
+    b=head
+    for i in range(1,len(lst)):
+        b.insert(lst[i])
+        b=b.next
+    return head     
 
 
-# node1=ListNode(10)
-# node2=ListNode(20)
-# node3=ListNode(30)
-# node4=ListNode(40)
-
-# node1.next=node2
-# node2.next=node3
-# node3.next=node4
-# head=node1
+head=BuildList([3,4,5,6,7,8])
 # current=head
-
+h=head.circularize()
+h.Traversing()
 # # node2.insert(80) 
 # # node1.delete() 
 
