@@ -16,3 +16,12 @@ class Stack:
         x=self.top.data
         self.top=self.top.next
         return x
+sl=Stack()
+print(sl.isEmpty())
+mynum=[5,8,4,3,7]
+for i in range(len(mynum)):
+    sl.push(mynum[i])
+print(sl.isEmpty())
+while not sl.isEmpty():
+    print(sl.pop())
+print(sl.isEmpty())

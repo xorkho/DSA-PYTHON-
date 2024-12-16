@@ -15,7 +15,7 @@ class ListNode:
             item=temp.data
             self.next=temp.next
         return item
-
+    
     def __len__(self):
         a=self
         i=0
@@ -91,10 +91,10 @@ def BuildList(lst):
     return head     
 
 
-head=BuildList([3,4,5,6,7,8])
-# current=head
-h=head.circularize()
-h.Traversing()
+# head=BuildList([3,4,5,6,7,8])
+# # current=head
+# h=head.circularize()
+# h.Traversing()
 # # node2.insert(80) 
 # # node1.delete() 
 
